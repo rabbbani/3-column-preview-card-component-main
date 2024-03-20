@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", sans-serif;
+
+}
+/* Colors */
+:root {
+--orange: hsl(31, 77%, 52%);
+--cyan: hsl(184, 100%, 22%);
+--dark-cyan: hsl(179, 100%, 13%);
+
+--p: hsla(0, 0%, 100%, 0.75);
+--heading-btn: hsl(0, 0%, 95%)
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--heading-btn);
+    position: relative;
+}
+.container {
+    width: 910px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.container .wrapper .card .icon {
+    max-width: 65px;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-family: "Big Shoulders Display", sans-serif;
+    color: var(--heading-btn);
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+p{
+    color: var(--p);
+    font-size: 14px;
+    margin-bottom: 70px;
+    line-height: 25px;
+}
+
+
+
+.container .wrapper .card{
+    padding: 40px;
+}
+
+.container .wrapper > .one {
+    background-color: var(--orange);
+}
+.container .wrapper > .two {
+    background-color: var(--cyan);
+}
+.container .wrapper > .three {
+    background-color: var(--dark-cyan);
+}
+
+.card .sec, .first, .third {
+    padding: 10px 20px;
+    background-color: var(--heading-btn);
+    border-radius: 40px;
+    border: 2px solid transparent;
+    transition: 300ms all;
+    cursor: pointer;
+}
+
+.card .first {
+    color: var(--orange);
+}
+.card .sec {
+    color: var(--cyan);
+}
+.card .third {
+    color: var(--dark-cyan);
+}
+
+.card 
+.first:hover, 
+.third:hover,
+.sec:hover {
+    background-color: transparent;
+    color: var(--heading-btn);
+    border: 2px solid var(--heading-btn);
+}
+@media only screen and (max-width: 768px){
+    .wrapper{
+        grid-template-columns: 1fr;
+        margin-bottom: 3rem;
+    }
+    h2{
+        margin-bottom: 25px;
+    }
+    p{
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+    .icon{
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+.attribution {
+    color: gray;
+    font-size: 11px; 
+    text-align: center; 
+    bottom: 1.3%;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+}
+.attribution a { 
+    color: grey;
+    text-decoration: none;
+    font-weight: 600;
+ }
+
+ @media only screen and (max-width: 425px){
+    .wrapper{
+        grid-template-columns: 1fr ;
+    }
+}
+
